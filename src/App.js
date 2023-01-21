@@ -1,6 +1,6 @@
 import React, { component } from 'react';
 import Navbar from "./components/Navbar"
-import './App.css';
+import Personal from "./components/Personal"
 import { render } from '@testing-library/react';
 import { Component } from 'react';
 
@@ -10,8 +10,9 @@ class App extends Component {
   }
   render() {
     return (
-      <div className="App">
-        <Navbar />
+      <div className="container">
+         <Navbar />
+         <Personal />
       </div>
     );
   }
