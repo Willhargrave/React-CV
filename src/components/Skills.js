@@ -37,6 +37,7 @@ class Skills extends Component {
     })
     return (
       <div className='skills'>
+        <h3>Tell Us Your Skills</h3>
         <form onSubmit={this.handleSubmit}>
           <input
             onChange={this.handleChange}
