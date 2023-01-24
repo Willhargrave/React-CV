@@ -6,6 +6,7 @@ class Experience extends Component {
         super()
         this.state = {
         default: {
+         id: uniqid(),
          company: "",
          from: "",
          end: ""
@@ -26,14 +27,23 @@ handleSubmit = (e) => {
         results: [...this.state.results, this.state.default]
     })
 }
+
+handleDelete = (id) => {
+    const newResults = this.state.results.filter(result => {
+       return result.id !== id
+    })
+    this.setState({
+      results: newResults
+    })
+  }
 render() {
 
     const displayExperience = this.state.results.map((result) => {
-        return <ExperienceResults data={result} key={result.id} />
+        return <ExperienceResults data={result} key={result.id} handleDelete={this.handleDelete}/>
     })
     return (
         <div className="experience">
-            <h3>experience</h3>
+            <h3>Experience</h3>
             <form onSubmit={this.handleSubmit}>
                 <input
                     onChange={this.handleChange}

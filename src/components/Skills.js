@@ -21,6 +21,15 @@ class Skills extends Component {
     })
   }
 
+  handleDelete = (id) => {
+    const newSkills = this.state.skills.filter(skill => {
+       return skill !== id
+    })
+    this.setState({
+      skills: newSkills
+    })
+  }
+
   handleSubmit = (e) => {
 		e.preventDefault()
 
@@ -33,7 +42,7 @@ class Skills extends Component {
     const { skill, skills } = this.state;
 
     const displaySkill = this.state.skills.map((skill) => {
-      return <SkillItem skill={skill} key={uniqid()} />
+      return <SkillItem skill={skill} key={uniqid()} handleDelete={this.handleDelete}/>
     })
     return (
       <div className='skills'>
@@ -41,7 +50,7 @@ class Skills extends Component {
         <form onSubmit={this.handleSubmit}>
           <input
             onChange={this.handleChange}
-            value={skill.text}
+            value={skill}
             type="text"
             name="skill"
           />

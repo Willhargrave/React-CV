@@ -6,6 +6,9 @@ const SkillItem = (props) => {
 			<div className="skill-name">
 				<p className="addedSkills">{props.skill}</p>
 			</div>
+			<div className="delete-container">
+				<button onClick={() => {props.handleDelete(props.skill)}}>D</button>
+			</div>
 		</div>
 	)
 }

@@ -5,8 +5,10 @@ class Education extends Component {
 
     constructor() {
         super()
+        const UID = uniqid()
         this.state = {
             default: {
+                id: UID,
                 school: "",
                 start: "",
                 end: "",
@@ -27,11 +29,22 @@ class Education extends Component {
             results: [...this.state.results, this.state.default]
         })
     }
+
+    handleDelete = (id) => {
+        const newResults = this.state.results.filter(result => {
+           return result.id !== id
+        })
+        this.setState({
+          results: newResults
+        })
+      }
+    
     render() {
 
         const displayEducation = this.state.results.map((result) => {
-            return <EducationResults data={result} key={result.id} />
+            return <EducationResults data={result} key={result.id} handleDelete={this.handleDelete}/>
         })
+
         return (
             <div className="education">
                 <h3>Education</h3>
