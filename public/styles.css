@@ -1,7 +1,5 @@
 /* main */
-.container {
-    text-align: center;
-  }
+
   .personal {
     display: flex;
     flex-direction: column;

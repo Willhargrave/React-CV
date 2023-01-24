@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import EditableLabel from 'react-editable-label';
 import Skills from "./Skills";
 import Education from './education';
+import Experience from './experience';
 class Personal extends Component {
     constructor(props) {
         super(props);
@@ -26,13 +27,7 @@ class Personal extends Component {
                  <Education />
                 </div>
                 <div className='information'>
-                    <h3>Work Experience</h3>
-                    <EditableLabel
-                        initialValue={'Company Name'}
-                    />
-                    <EditableLabel
-                        initialValue={'Duration'}
-                    />
+                    <Experience />
                 </div>
                 <div className='information'>
                     <Skills />
