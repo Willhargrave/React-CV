@@ -45,7 +45,7 @@ class Skills extends Component {
       return <SkillItem skill={skill} key={uniqid()} handleDelete={this.handleDelete}/>
     })
     return (
-      <div className='skills'>
+      <div className='info-box'>
         <h3>Tell Us Your Skills</h3>
         <form onSubmit={this.handleSubmit}>
           <input
@@ -53,8 +53,9 @@ class Skills extends Component {
             value={skill}
             type="text"
             name="skill"
+            className='labelYear'
           />
-          <button type="submit">Add Skill</button>
+         <button>Save</button>
         </form>
         <div className='displaySkills'>
           {displaySkill}

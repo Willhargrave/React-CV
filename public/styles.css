@@ -1,9 +1,14 @@
 /* main */
-
+  .main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: flex-start;
+  }
   .personal {
     display: flex;
     flex-direction: column;
     margin-top: 75px;
+    margin-right: 50px;
     background-color: #e69fbe;
     box-shadow: 8px 6px 10px 0px #696f6f;
     border-radius: 20px;
@@ -13,12 +18,37 @@
     display: flex;
     flex-direction: column;
   }
+  .deleteButton {
+    background-color: transparent;
+    border-color: transparent;
+    position: absolute;
+    margin-top: -50px;
+    margin-left: 215px;
+  }
+  .details {
+    background: rgb(76 61 255 / 50%);
+    box-shadow: 8px 6px 10px 0px #696f6f;
+    border-radius: 20px;
+    width: 25%;
+    margin: 10px 10px 10px 10px;
+    padding: 10px;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+  }
+  .labelYear {
+    width: 15%;
+  }
+
   /* skills */
+  .info-box {
+    margin-top: 12px;
+  }
   .displaySkills {
     display: flex;
     margin-top: 2px;
   }
-  .skill-name {
+  .skill-card {
     margin: 0 10px 10px 10px;
     padding: 10px;
     display: flex;
@@ -26,20 +56,33 @@
     background: rgb(76 61 255 / 50%);
     border-radius: 10px;
   }
+  .skill-name {
+   margin-right: 5px;
+  }
+  .deleteButtonSkill {
+    background-color: transparent;
+    border-color: transparent;
+    margin: auto;
+    width: 10%;
+    font-size: 1.3rem;
+    opacity: 0.7;
+  }
+
   /* education */
   .displayEducation {
     display: flex;
     margin-top: 2px;
   }
-  .school-details {
-    width: 50%;
-    margin: 0 10px 10px 10px;
-    padding: 10px;
-    display: flex;
-    align-items: flex-start;
-    flex-direction: column;
+  /* image */
+  .work-image {
+    width: 100%;
+    height: 100vh;
+    margin-left: -200px;
+    margin-top: 42px;
+    object-fit: cover;
   }
   body {
+    background-image: url("https://images.unsplash.com/photo-1554034483-04fda0d3507b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80");
     margin: 0;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
       'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',

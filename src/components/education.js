@@ -46,28 +46,34 @@ class Education extends Component {
         })
 
         return (
-            <div className="education">
+            <div className='info-box'>
                 <h3>Education</h3>
                 <form onSubmit={this.handleSubmit}>
                     <input
+                        className="label"
                         onChange={this.handleChange}
                         value={this.state.default.school}
                         type="text"
                         name="school"
+                        placeholder='Enter Your School/Instution'
                     />
                     <input
+                        className="labelYear"
                         onChange={this.handleChange}
                         value={this.state.default.start}
                         type="text"
                         name="start"
+                        placeholder='YYYY'
                     />
                     <input
+                        className="labelYear"
                         onChange={this.handleChange}
                         value={this.state.default.end}
                         type="text"
                         name="end"
+                        placeholder='YYYY'
                     />
-                    <button type="submit">Add</button>
+                <button className="submit">Save</button>
                 </form>
                 <div className='display-education'>
                 {displayEducation}

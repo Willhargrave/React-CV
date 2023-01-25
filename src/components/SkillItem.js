@@ -7,7 +7,7 @@ const SkillItem = (props) => {
 				<p className="addedSkills">{props.skill}</p>
 			</div>
 			<div className="delete-container">
-				<button onClick={() => {props.handleDelete(props.skill)}}>D</button>
+				<button onClick={() => {props.handleDelete(props.skill)}}className="deleteButtonSkill">❌</button>
 			</div>
 		</div>
 	)

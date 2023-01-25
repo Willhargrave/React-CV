@@ -42,7 +42,7 @@ render() {
         return <ExperienceResults data={result} key={result.id} handleDelete={this.handleDelete}/>
     })
     return (
-        <div className="experience">
+        <div className='info-box'>
             <h3>Experience</h3>
             <form onSubmit={this.handleSubmit}>
                 <input
@@ -50,20 +50,25 @@ render() {
                     value={this.state.default.company}
                     type="text"
                     name="company"
+                    placeholder='Company Name'
                 />
                 <input
                     onChange={this.handleChange}
                     value={this.state.default.start}
                     type="text"
                     name="start"
+                    placeholder='YYYY'
+                    className='labelYear'
                 />
                 <input
                     onChange={this.handleChange}
                     value={this.state.default.end}
                     type="text"
                     name="end"
+                    placeholder='YYYY'
+                    className='labelYear'
                 />
-                <button type="submit">Add</button>
+                   <button className="submit">Save</button>
             </form>
             <div className='display-experience'>
             {displayExperience}
